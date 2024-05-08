@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor - Tip Calculator App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Logo">
+        <div class="font"></div>
+    </header>
+    <div class="container">
+        <div class="left">
+            <form>
+                <div class="label">
+                    <label for="bill">Bill</label>
+                    <p id="billError" class="error">Can't be zero</p>
+                </div>
+                <div id="billForm" class="input">
+                    <img src="images/icon-dollar.svg" alt="Dollar">
+                    <input type="text" id="bill" placeholder="0">
+                </div>
+            </form>
+            <div class="tips">
+                <p>Select Tip %</p>
+                <div class="btns">
+                    <button name="tip" id="5">5%</button>
+                    <button name="tip" id="10">10%</button>
+                    <button name="tip" id="15">15%</button>
+                    <button name="tip" id="25">25%</button>
+                    <button name="tip" id="50">50%</button>
+                    <button>Custom</button>
+                </div>
+            </div>
+            <form>
+                <div class="label">
+                    <label for="people">Number of People</label>
+                    <p id="peopleError" class="error">Can't be zero</p>
+                </div>
+                <div id="peopleForm" class="input">
+                    <img src="images/icon-person.svg" alt="Person">
+                    <input type="text" id="people" placeholder="0">
+                </div>
+            </form>
+        </div>
+        <div class="right">
+            <div class="total">
+                <div class="amount-container">
+                    <p class="title">
+                        Tip Amount
+                        <span class="divider">/ person</span>
+                    </p>
+                    <p id="tipAmount" class="amount">$0.0</p>
+                </div>
+                <div class="amount-container">
+                    <p class="title">
+                        Total
+                        <span class="divider">/ person</span>
+                    </p>
+                    <p id="totalAmount" class="amount">$0.0</p>
+                </div>
+            </div>
+            <div class="right-btns">
+                <button id="calc" class="calc">CALCULATE</button>
+                <button id="reset" class="reset">RESET</button>
+            </div>
+        </div>
+    </div>
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://pablobarcala.com.ar">Pablo Barcala</a>.
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

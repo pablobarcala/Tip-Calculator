@@ -1,0 +1,269 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    font-family: "Space Mono", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 16px;
+    font-weight: 700;
+    --BG: hsl(185, 41%, 84%);
+    --FONT: hsl(186, 14%, 43%);
+    --INPUT: hsl(189, 41%, 97%);
+    --GREEN-BG: hsl(183, 100%, 15%);
+    --GREEN-TXT-BTN: hsl(172, 67%, 45%);
+    --GREEN-LIGHT: hsl(172, 56%, 61%);
+    --WHITE: hsl(0, 0%, 100%);
+    --PLACEHOLDER: hsl(184, 14%, 56%);
+    background-color: var(--BG);
+    color: var(--FONT);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: var(--WHITE);
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- LEFT styles --- */
+
+.left {
+    box-sizing: border-box;
+    width: 45%;
+    padding: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.error {
+    display: none;
+    color: red;
+    font-size: 0.8rem;
+}
+
+.error.show {
+    display: block;
+}
+
+.input {
+    box-sizing: border-box;
+    background-color: var(--INPUT);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input:focus-within {
+    border: 2px solid var(--GREEN-TXT-BTN);
+}
+
+.input.error {
+    border: 2px solid red;
+}
+
+input {
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+    width: 80%;
+    text-align: end;
+    color: var(--GREEN-BG);
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: "Space Mono";
+}
+
+input:focus {
+    outline: none;
+}
+
+::-webkit-input-placeholder {
+    color: hsl(184, 14%, 56%);
+}
+
+.tips,
+form {
+    width: 100%;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: "Space Mono";
+    text-align: center;
+}
+
+.btns > button {
+    width: 30%;
+    color: var(--WHITE);
+    background-color: var(--GREEN-BG);
+}
+
+button:hover {
+    background-color: var(--GREEN-LIGHT);
+    color: var(--GREEN-BG);
+}
+
+button:focus {
+    outline: none;
+}
+
+button.active {
+    background-color: var(--GREEN-TXT-BTN);
+    color: var(--GREEN-BG);
+}
+
+/* --- RIGHT styles --- */
+
+.right,
+.total {
+    display: flex;
+    flex-direction: column;
+}
+
+.right {
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 50px;
+    background-color: var(--GREEN-BG);
+    border-radius: 20px;
+    width: 50%;
+}
+
+.total {
+    gap: 30px;
+    width: 100%;
+}
+
+.amount-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    color: var(--WHITE);
+    font-weight: 700;
+}
+
+.divider {
+    color: var(--FONT);
+}
+
+.amount {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--GREEN-TXT-BTN);
+}
+
+.right-btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.right-btns > button {
+    width: 40%;
+}
+
+.calc {
+    background-color: var(--GREEN-TXT-BTN);
+    color: var(--GREEN-BG);
+}
+
+.reset {
+    opacity: 0.2;
+}
+
+.reset:hover {
+    opacity: 1;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    padding: 20px 0;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 700px) {
+    :root {
+        font-size: 14px;
+    }
+
+    .container,
+    .left,
+    .right {
+        width: 100%;
+    }
+    
+    .container {
+        box-sizing: border-box;
+        flex-direction: column;
+    }
+
+    .btns > button {
+        min-width: 45%;
+    }
+
+    .right {
+        padding: 20px;
+    }
+
+    .right-btns {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .right-btns > button {
+        width: 100%;
+    }
+}
