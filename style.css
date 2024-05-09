@@ -156,6 +156,16 @@ button.active {
     color: var(--GREEN-BG);
 }
 
+.input.custom {
+    width: 30%;
+    justify-content: center;
+}
+
+.input.custom > input {
+    width: 100%;
+    text-align: center;
+}
+
 /* --- RIGHT styles --- */
 
 .right,
@@ -250,6 +260,10 @@ button.active {
     }
 
     .btns > button {
+        min-width: 45%;
+    }
+
+    .input.custom {
         min-width: 45%;
     }
 

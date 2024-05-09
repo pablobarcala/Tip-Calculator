@@ -65,6 +65,12 @@ function validateForm() {
 
 // Funcion para calcular
 function calculate() {
+    var custom = document.getElementById("custom")
+
+    if(tip == 0 && custom.value != 0){
+        tip = (custom.value / 100)
+    }
+
     tipPerson = (bill * tip) / people
     totalPerson = (bill * (tip + 1)) / people
 
@@ -84,12 +90,22 @@ function validateBtn(i) {
             tipBtns.item(i).classList.add("active")
 
             activeTip = i
-            tip = (tipBtns.item(i).id / 100)
+
+            if(tipBtns.item(i).id != "") {
+                tip = (tipBtns.item(i).id / 100)
+            } else {
+                tip = 0
+            }
         }
     } else {
         tipBtns.item(i).classList.add("active")
         
         activeTip = i
-        tip = (tipBtns.item(i).id / 100)
+
+        if(tipBtns.item(i).id != "") {
+            tip = (tipBtns.item(i).id / 100)
+        } else {
+            tip = 0
+        }
     }
 }
