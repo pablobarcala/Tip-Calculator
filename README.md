@@ -1,9 +1,5 @@
 # Frontend Mentor - Tip calculator app solution
 
-<<<<<<< HEAD
-![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)
-=======
->>>>>>> 852ff660d6fe52df7b889de36779b5a35c1d9ffb
 This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Welcome! 👋
